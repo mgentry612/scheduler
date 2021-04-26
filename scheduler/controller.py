@@ -6,7 +6,7 @@ class Controller():
         self.scheduler = Scheduler()
         self.dateTimeFormat = self.scheduler.getDateTimeFormat()
 
-    def getAppointments(self, userId):
+    def getEvents(self, userId):
         
         # Validate userId
         if not self.isUserIdValid(userId):
@@ -17,13 +17,13 @@ class Controller():
 
         else:
             # Inputs valid
-            appointments = self.scheduler.getAppointments(int(userId))
+            events = self.scheduler.getEvents(int(userId))
             return {
                 "status": 200,
-                "appointments": appointments,
+                "events": events,
             }
 
-    def addAppointment(self, dateTimeStr, userId):
+    def addEvent(self, dateTimeStr, userId):
 
         userId = str(userId)
 
@@ -45,7 +45,7 @@ class Controller():
 
         else:
             # Inputs valid
-            response = self.scheduler.addAppointment(dateTimeObj, int(userId))
+            response = self.scheduler.addEvent(dateTimeObj, int(userId))
             if response["success"]:
                 return {
                     "status": 200,

@@ -22,7 +22,7 @@ class Scheduler():
     def getDateTimeFormat(self):
         return self.dateTimeFormat
 
-    def getAppointments(self, userId):
+    def getEvents(self, userId):
 
         events = []
         if userId in self.userIdIndex.keys():
@@ -41,7 +41,7 @@ class Scheduler():
         return events
             
 
-    def addAppointment(self, dateTime, userId):
+    def addEvent(self, dateTime, userId):
 
         # Check for other events on same day
         dateFormat = self.getDateTimeFormat().split()[0]

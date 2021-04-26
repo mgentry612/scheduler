@@ -15,7 +15,7 @@ def index():
     if request.method == 'GET':
 
         user_id = request.args.get('user_id')
-        response = controller.getAppointments(user_id)
+        response = controller.getEvents(user_id)
         return jsonify(response)
 
     elif request.method == 'POST':
@@ -23,7 +23,7 @@ def index():
         date_time = request.args.get('date_time')
         user_id = request.args.get('user_id')
 
-        response = controller.addAppointment(date_time, user_id)
+        response = controller.addEvent(date_time, user_id)
         return jsonify(response)
 
 
