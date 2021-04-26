@@ -23,7 +23,10 @@ class Scheduler():
         return self.dateTimeFormat
 
     def getEvents(self, userId):
-
+        """
+        Get events of a specific user
+        :param userId: ID of user
+        """
         events = []
         if userId in self.userIdIndex.keys():
             eventIds = self.userIdIndex[userId]
@@ -42,6 +45,11 @@ class Scheduler():
             
 
     def addEvent(self, dateTime, userId):
+        """
+        Add a single event at the date-time for the user with userId
+        :param dateTime: date-time
+        :param userId: ID of user
+        """
 
         # Check for other events on same day
         dateFormat = self.getDateTimeFormat().split()[0]

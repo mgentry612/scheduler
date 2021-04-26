@@ -7,6 +7,10 @@ class Controller():
         self.dateTimeFormat = self.scheduler.getDateTimeFormat()
 
     def getEvents(self, userId):
+        """
+        Get events of a specific user
+        :param userId: ID of user
+        """
         
         # Validate userId
         if not self.isUserIdValid(userId):
@@ -24,6 +28,11 @@ class Controller():
             }
 
     def addEvent(self, dateTimeStr, userId):
+        """
+        Add a single event at the date-time for the user with userId
+        :param dateTime: date-time
+        :param userId: ID of user
+        """
 
         userId = str(userId)
 
