@@ -1,10 +1,10 @@
-# Maven Clinic Scheduler
+# Scheduler
 
 A scheduler for your busy life.
 
 
 ## Source Code
-https://github.com/mgentry612/maven_scheduler
+https://github.com/mgentry612/scheduler
 
 ## Installation
 
