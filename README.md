@@ -18,7 +18,7 @@ docker pull mgentry612/maven_scheduler:v1
 
 Run the image on port 5001
 ```bash
-docker run --name maven_scheduler -p 5001:5001 mgentry612/maven_scheduler:v1
+docker run --rm --name maven_scheduler -p 5001:5001 mgentry612/maven_scheduler:v1
 ```
 
 ## Usage
