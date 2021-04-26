@@ -1,6 +1,6 @@
 # Scheduler
 
-A scheduler for your busy life.
+A scheduler for your busy life written in Python, served in flask, and hosted in a docker container.
 
 
 ## Source Code
